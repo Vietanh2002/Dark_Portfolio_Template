@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-family);
     font-weight: 400;
@@ -349,82 +353,4 @@ li {
 #footer p a {
     text-decoration: underline;
     color: #757575;
-}
-
-/* =============== Responsive =============== */
-
-@media screen and (max-width: 600px) {
-    .nav__sidebar {
-        display: none;
-    }
-
-    #main {
-        margin-left: 0px;
-        transition: margin-left 0.4s;
-    }
-
-    #header {
-        display: block;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        z-index: 1;
-    }
-
-    #header .header__list {
-        display: flex;
-        background: #000;
-        opacity: 0.6;
-    }
-
-    #header .header__list a {
-        width: 25%;
-        text-align: center;
-        padding: 8px 16px;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 13px;
-        display: inline-block;
-        opacity: 0;
-        animation: slideRight 0.5s ease-in-out forwards;
-        animation-delay: calc(0.2s * var(--i));
-    }
-
-    @keyframes slideRight {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(0%);
-            opacity: 1;
-        }
-    }
-
-    #slider span {
-        display: none;
-    }
-
-    .content__about .about__achiv {
-        flex-wrap: wrap;
-    }
-    
-    .content__about .about__achiv div {
-        width: 100%;
-    }
-
-    .content__about .about-course .course-list {
-        flex-wrap: wrap;
-    }
-    
-    .content__about .course-list .course-info {
-        width: 100%;
-    }
-
-    .content__photo .photo__list {
-        flex-wrap: wrap;
-    }
-    
-    .content__photo .photo__list .image {
-        width: 100%;
-    }
 }
